@@ -1,4 +1,4 @@
-package vtsen.hashnode.dev.buildutils.example.ui
+package com.github.scto.buildutils.example.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,8 +9,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import vtsen.hashnode.dev.buildutils.example.ui.screens.MainScreen
-import vtsen.hashnode.dev.buildutils.example.ui.theme.BuildUtilsExampleAppTheme
+
+import com.github.scto.buildutils.example.ui.screens.MainScreen
+import com.github.scto.buildutils.example.ui.theme.BuildUtilsExampleAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

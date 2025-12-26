@@ -8,7 +8,8 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "vtsen.hashnode.dev.buildutils.example"
+        applicationId = "com.github.scto.buildutils.example"
+        
         minSdk = 21
         targetSdk = 33
         versionCode = 1
@@ -32,39 +33,36 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    
     buildFeatures {
         compose = true
     }
+    
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.5"
     }
+    
     packaging {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
-    namespace = "vtsen.hashnode.dev.buildutils.example"
+    
+    namespace = "com.github.scto.buildutils.example"
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
 
-    implementation("androidx.core:core-ktx:1.10.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(libs.bundles.androidx.lifeycle)
 
-    val composeVersion = "1.4.3"
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
-    debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
+    implementation(libs.androidx.activity.compose)
 
-    implementation("androidx.compose.material3:material3:1.2.0-alpha02")
-
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
-
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.bundles.compose.ui)
 
     implementation(project(":buildutils"))
     //implementation("com.github.vinchamp77:buildutils:0.0.12")

@@ -1,4 +1,4 @@
-package vtsen.hashnode.dev.buildutils.example.ui.theme
+package com.github.scto.buildutils.example.ui.theme
 
 import androidx.compose.material3.Shapes
 

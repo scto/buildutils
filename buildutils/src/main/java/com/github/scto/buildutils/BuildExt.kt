@@ -1,10 +1,9 @@
-package com.github.vinchamp77.buildutils
+package com.github.scto.buildutils
 
 import android.os.Build
 import androidx.annotation.ChecksSdkIntAtLeast
 
 class BuildExt {
-
     /* Reference: https://en.wikipedia.org/wiki/Android_version_history#Overview */
     class VERSION {
         companion object {

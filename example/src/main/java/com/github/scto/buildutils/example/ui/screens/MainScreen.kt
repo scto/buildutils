@@ -1,12 +1,13 @@
-package vtsen.hashnode.dev.buildutils.example.ui.screens
+package com.github.scto.buildutils.example.ui.screens
 
 import android.os.Build
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.github.vinchamp77.buildutils.BuildExt
-import vtsen.hashnode.dev.buildutils.example.ui.theme.BuildUtilsExampleAppTheme
+
+import com.github.scto.buildutils.BuildExt
+import com.github.scto.buildutils.example.ui.theme.BuildUtilsExampleAppTheme
 
 @Composable
 fun MainScreen() {

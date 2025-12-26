@@ -1,11 +1,12 @@
-package vtsen.hashnode.dev.buildutils.example.ui.theme
+package com.github.scto.buildutils.example.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.github.vinchamp77.buildutils.BuildExt
+
+import com.github.scto.buildutils.BuildExt
 
 private val LightColorScheme = lightColorScheme(
     primary = md_theme_light_primary,

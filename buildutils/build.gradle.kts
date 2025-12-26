@@ -1,11 +1,11 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
-    id("maven-publish")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.github.vinchamp77.buildutils"
+    namespace = "com.github.scto.buildutils"
+    
     compileSdk = 33
 
     defaultConfig {
@@ -24,35 +24,17 @@ android {
             )
         }
     }
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
     }
 }
 
 dependencies {
-    implementation("androidx.annotation:annotation:1.6.0")
-}
-
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.vinchamp77"
-            artifactId = "buildutils"
-            version = "0.0.12"
-
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
+    implementation(libs.androidx.annotation)
 }
